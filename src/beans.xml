@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean id="test" class="test.Test">
+		<property name="testMap">
+			<map>
+				<entry key="a">
+					<value>1</value>
+				</entry>
+				<entry key="b">
+					<value>2</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="test2" class="test.Test2">
+	</bean>
+	
+	
+	<bean id = "printController" class="com.tongji.controller.PrintController">
+		<property name="testMap">
+			<map>
+				<entry key="a">
+					<value>1</value>
+				</entry>
+				<entry key="b">
+					<value>2</value>
+				</entry>
+			</map>
+		</property>
+		<property name="printService" ref = "printService"></property>
+	</bean>
+	<bean id = "printService" class="com.tongji.service.PrintService" >
+		
+	</bean>
+	
+	<bean id="test3" class="com.testjar.entity.Test">
+		<property name="testMap">
+			<map>
+				<entry key="a">
+					<value>1</value>
+				</entry>
+				<entry key="b">
+					<value>2</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+</beans>
